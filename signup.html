@@ -22,9 +22,11 @@
 
 
         input[type=text],
+        input[type=email],
+        input[type=date],
         input[type=password] {
             width: 100%;
-            margin: 8px 0;
+            margin: 15px 0;
             padding: 12px 20px;
             display: inline-block;
             border: 2px solid #388E3C;
@@ -48,10 +50,23 @@
     <center>
         <h1> Registeration Form </h1>
     </center>
-    <form>
+    <form method="POST">
         <div class="container">
             <label>Username : </label>
             <input type="text" placeholder="Enter Username" name="username" required>
+            <label>First Name : </label>
+            <input type="text" placeholder="Enter Your First Name" name="firstname" required>
+            <label>Last Name : </label>
+            <input type="text" placeholder="Enter Your Last Name" name="lastname" required>
+            <label>Email : </label>
+            <input type="email" placeholder="Enter Your Email" name="email" required>
+            <label>Birthdate : </label>
+            <input type="date" placeholder="Enter Your Birth Date" name="birthdate" required>
+            <label> Gender : </label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br><br>
             <label>Password : </label>
             <input type="password" placeholder="Enter Password" name="password" required>
             <button type="submit">Register</button>
