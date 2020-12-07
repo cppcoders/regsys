@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Home Page </title>
+    <title> New Course Page </title>
     <style>
         Body {
             font-family: Calibri, Helvetica, sans-serif;
@@ -21,15 +21,16 @@
         }
 
 
-        a {
+        input[type=text],
+        input[type=email],
+        input[type=date],
+        input[type=password] {
             width: 100%;
-            margin: 8px 0;
+            margin: 15px 0;
             padding: 12px 20px;
             display: inline-block;
-            border: 2px solid #949494;
-            background-color: antiquewhite;
+            border: 2px solid #388E3C;
             box-sizing: border-box;
-            text-align: center;
         }
 
         button:hover {
@@ -47,14 +48,17 @@
 
 <body>
     <center>
-        <h1> Welcome </h1>
+        <h1> Add New Course Form </h1>
     </center>
-    <form>
+    <form method="POST">
         <div class="container">
-            <a href="/login">Login</a>
-            <a href="/staffRegister">Staff Registration</a>
-            <a href="/studentRegister">Student Registration</a>
-            <a href="/courseRegister">Add new Course</a>
+            <label>Course Name : </label>
+            <input type="text" placeholder="Enter Course Name" name="coursename" required>
+            <label>Course Code : </label>
+            <input type="text" placeholder="Enter Your Course Code" name="coursecode" required>
+            <label>Credit Hours : </label>
+            <input type="text" placeholder="Enter Number of Credit Hours" name="credit" required>
+            <button type="submit">Add</button>
         </div>
     </form>
 </body>

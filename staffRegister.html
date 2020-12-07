@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Login Page </title>
+    <title> Staff Registeration </title>
     <style>
         Body {
             font-family: Calibri, Helvetica, sans-serif;
@@ -21,6 +21,8 @@
         }
 
 
+        select,
+        span,
         input[type=text],
         input[type=email],
         input[type=date],
@@ -48,12 +50,14 @@
 
 <body>
     <center>
-        <h1> Registeration Form </h1>
+        <h1> Staff Registeration Form </h1>
     </center>
     <form method="POST">
         <div class="container">
             <label>Username : </label>
             <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" required>
             <label>First Name : </label>
             <input type="text" placeholder="Enter Your First Name" name="firstname" required>
             <label>Last Name : </label>
@@ -62,13 +66,31 @@
             <input type="email" placeholder="Enter Your Email" name="email" required>
             <label>Birthdate : </label>
             <input type="date" placeholder="Enter Your Birth Date" name="birthdate" required>
-            <label> Gender : </label>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female" required>
-            <label for="female">Female</label><br><br>
-            <label>Password : </label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <span>
+                <label> Gender : </label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </span>
+            <span>
+                <label>Choose The First Courses You Wanna Teach</label>
+                <select name="course1" id="course1">
+                    <option selected value></option>
+                </select>
+            </span>
+            <span>
+                <label>Choose The Second Courses You Wanna Teach</label>
+                <select name="course2" id="course2">
+                    <option selected value></option>
+                </select>
+            </span>
+            <span>
+                <label>Choose The Third Courses You Wanna Teach</label>
+                <select name="course3" id="course3">
+                    <option selected value></option>
+                </select>
+            </span>
             <button type="submit">Register</button>
         </div>
     </form>

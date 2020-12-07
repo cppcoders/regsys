@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Student Registeration </title>
+    <style>
+        Body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: #EEEEEE;
+        }
+
+        button {
+            background-color: #388E3C;
+            width: 100%;
+            color: orange;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        select,
+        span,
+        input[type=text],
+        input[type=email],
+        input[type=date],
+        input[type=password] {
+            width: 100%;
+            margin: 15px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid #388E3C;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .container {
+            padding: 25px;
+            margin: auto;
+            width: 50%;
+            background-color: E0E0E0;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1> Student Registeration Form </h1>
+    </center>
+    <form method="POST">
+        <div class="container">
+            <label>Username : </label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <label>First Name : </label>
+            <input type="text" placeholder="Enter Your First Name" name="firstname" required>
+            <label>Last Name : </label>
+            <input type="text" placeholder="Enter Your Last Name" name="lastname" required>
+            <label>Email : </label>
+            <input type="email" placeholder="Enter Your Email" name="email" required>
+            <label>Birthdate : </label>
+            <input type="date" placeholder="Enter Your Birth Date" name="birthdate" required>
+            <span>
+                <label> Gender : </label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </span>
+            <span>
+                <label>Choose The First Courses You Wanna Register</label>
+                <select name="course1" id="course1">
+                    <option selected value></option>
+                </select>
+            </span>
+            <span>
+                <label>Choose The Second Courses You Wanna Register</label>
+                <select name="course2" id="course2">
+                    <option selected value></option>
+                </select>
+            </span>
+            <span>
+                <label>Choose The Third Courses You Wanna Register</label>
+                <select name="course3" id="course3">
+                    <option selected value></option>
+                </select>
+            </span>
+            <span>
+                <label>Choose The Fourth Courses You Wanna Register</label>
+                <select name="course4" id="course4">
+                    <option selected value></option>
+                </select>
+            </span>
+            <span>
+                <label>Choose The Fifth Courses You Wanna Register</label>
+                <select name="course5" id="course5">
+                    <option selected value></option>
+                </select>
+            </span>
+            <span>
+                <label>Choose The Sixth Courses You Wanna Register</label>
+                <select name="course6" id="course6">
+                    <option selected value></option>
+                </select>
+            </span>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+
+</html>
