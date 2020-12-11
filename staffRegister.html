@@ -94,6 +94,22 @@
             <button type="submit">Register</button>
         </div>
     </form>
+    >
+    <script>
+        var course1 = document.getElementById("course1");
+        var course2 = document.getElementById("course2");
+        var course3 = document.getElementById("course3");
+        fetch('/get')
+            .then(response => response.json())
+            .then(function (data) {
+                for (i = 0; i < data.length; i++) {
+                    course1.innerHTML = course1.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                    course2.innerHTML = course2.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                    course3.innerHTML = course3.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                }
+            });
+
+    </script>
 </body>
 
 </html>

@@ -111,6 +111,27 @@
             <button type="submit">Register</button>
         </div>
     </form>
+    <script>
+        var course1 = document.getElementById("course1");
+        var course2 = document.getElementById("course2");
+        var course3 = document.getElementById("course3");
+        var course4 = document.getElementById("course4");
+        var course5 = document.getElementById("course5");
+        var course6 = document.getElementById("course6");
+        fetch('/get')
+            .then(response => response.json())
+            .then(function (data) {
+                for (i = 0; i < data.length; i++) {
+                    course1.innerHTML = course1.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                    course2.innerHTML = course2.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                    course3.innerHTML = course3.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                    course4.innerHTML = course4.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                    course5.innerHTML = course5.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                    course6.innerHTML = course6.innerHTML + ('<option value="' + data[i] + '"' + ">" + data[i] + "</option>")
+                }
+            });
+
+    </script>
 </body>
 
 </html>
